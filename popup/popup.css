@@ -1,0 +1,265 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  width: 300px;
+  font-family: "Segoe UI", "Helvetica Neue", sans-serif;
+  color: #1a2e30;
+  background:
+    radial-gradient(120% 80% at 100% 0%, rgba(20, 145, 155, 0.18), transparent 55%),
+    linear-gradient(180deg, #f7fbfb 0%, #e8f2f2 100%);
+}
+
+header {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 16px 16px 8px;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: linear-gradient(145deg, #0d7377, #14919b);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 16px rgba(13, 115, 119, 0.35);
+}
+
+.logo svg {
+  width: 22px;
+  height: 22px;
+  fill: #fff;
+}
+
+h1 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+header p {
+  margin: 2px 0 0;
+  font-size: 12px;
+  color: #5a7a7c;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 8px 16px 12px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 11px;
+  font-weight: 650;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #3d5c5e;
+}
+
+input,
+select,
+textarea {
+  border: 1px solid rgba(13, 115, 119, 0.22);
+  border-radius: 10px;
+  padding: 9px 10px;
+  font-size: 13px;
+  font-family: inherit;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: normal;
+  color: #1a2e30;
+  background: #fff;
+  outline: none;
+}
+
+select {
+  cursor: pointer;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #0d7377;
+  box-shadow: 0 0 0 3px rgba(13, 115, 119, 0.12);
+}
+
+.model-hint {
+  margin: -4px 0 0;
+  font-size: 12px;
+  color: #5a7a7c;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.appearance {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 10px 12px;
+  border: 1px solid rgba(13, 115, 119, 0.18);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.55);
+}
+
+.section-title {
+  margin: 0;
+  font-size: 11px;
+  font-weight: 650;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #3d5c5e;
+}
+
+.range-label {
+  gap: 6px;
+}
+
+.range-label span {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: none;
+  letter-spacing: normal;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.range-label em {
+  font-style: normal;
+  color: #0d7377;
+  font-weight: 700;
+}
+
+.range-label input[type="range"] {
+  width: 100%;
+  padding: 0;
+  border: none;
+  accent-color: #0d7377;
+  background: transparent;
+}
+
+.check-row {
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  text-transform: none;
+  letter-spacing: normal;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.check-row input {
+  width: auto;
+  accent-color: #0d7377;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 2px 7px;
+  border-radius: 999px;
+}
+
+.tag.lite {
+  background: #e6f4f4;
+  color: #0d7377;
+}
+
+.tag.max {
+  background: #1a2e30;
+  color: #fff;
+}
+
+.advanced {
+  border: 1px solid rgba(13, 115, 119, 0.18);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.55);
+  overflow: hidden;
+}
+
+.advanced summary {
+  padding: 10px 12px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #3d5c5e;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+}
+
+.advanced summary::-webkit-details-marker {
+  display: none;
+}
+
+.advanced summary::after {
+  content: "+";
+  float: right;
+  font-weight: 700;
+  color: #0d7377;
+}
+
+.advanced[open] summary::after {
+  content: "−";
+}
+
+.advanced-body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0 12px 12px;
+}
+
+.hint {
+  margin: 0;
+  font-size: 11.5px;
+  line-height: 1.4;
+  color: #6a8587;
+  text-transform: none;
+  letter-spacing: normal;
+  font-weight: 400;
+}
+
+button[type="submit"] {
+  border: none;
+  border-radius: 10px;
+  padding: 11px;
+  background: #0d7377;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 650;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background: #0a5c60;
+}
+
+.status {
+  min-height: 16px;
+  margin: 0;
+  font-size: 12px;
+  color: #0d7377;
+  text-align: center;
+}
+
+footer {
+  padding: 0 16px 16px;
+  font-size: 11.5px;
+  line-height: 1.45;
+  color: #5a7a7c;
+}
